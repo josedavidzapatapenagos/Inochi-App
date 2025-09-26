@@ -13,7 +13,3 @@
 # Cachear dependencias para que los builds sean más rápidos
 [functions]
   node_bundler = "esbuild"
-
-# Configuración específica para Vite
-[[plugins]]
-  package = "@netlify/plugin-vite"
