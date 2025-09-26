@@ -1,0 +1,19 @@
+[build]
+  # Comando para compilar
+  command = "npm run build"
+  # Carpeta que Netlify debe publicar
+  publish = "dist"
+
+[build.environment]
+  # Versión de Node recomendada por Vite
+  NODE_VERSION = "18"
+  # Fuerza a Netlify a instalar con npm (más estable que pnpm/bun en Netlify)
+  NPM_FLAGS = "--legacy-peer-deps"
+
+# Cachear dependencias para que los builds sean más rápidos
+[functions]
+  node_bundler = "esbuild"
+
+# Configuración específica para Vite
+[[plugins]]
+  package = "@netlify/plugin-vite"
